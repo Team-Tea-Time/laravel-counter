@@ -1,0 +1,28 @@
+{
+    "name": "teamteatime/laravel-counter",
+    "description": "A Laravel 5 package providing counting functionality on models, such as view counters or 'likes'.",
+    "keywords": ["laravel", "laravel-5", "views", "view", "likes", "counter"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Riari",
+            "email": "hello@ricko.me"
+        },
+        {
+            "name": "NeeHi",
+            "email": "nick.snape@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "TeamTeaTime\\Counter\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
