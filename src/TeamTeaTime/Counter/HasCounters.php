@@ -29,7 +29,7 @@ trait HasCounters
         ];
 
         if ($options['user_id'] == 'callback') {
-            $userIDCallback = config('filer.user.id');
+            $userIDCallback = config('counter.user.id');
             $userID = $userIDCallback();
         } else {
             $userID = $options['user_id'];
@@ -39,7 +39,7 @@ trait HasCounters
         $count = Count::firstOrNew([
             'user_id'   => $userID,
             'model_id'  => $this->id,
-            'key'       => $options['key']
+            'key'       => $key
         ]);
         $count->count = $count->count + $options['amount'];
         $count->save();
