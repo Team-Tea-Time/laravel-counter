@@ -1,4 +1,4 @@
-<?php namespace TeamTeaTime\Filer;
+<?php namespace TeamTeaTime\Counter;
 
 use Eloquent;
 
