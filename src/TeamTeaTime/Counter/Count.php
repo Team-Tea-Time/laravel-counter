@@ -9,7 +9,7 @@ class Count extends Eloquent
     protected $table      = 'counter_counts';
     public    $timestamps = true;
     protected $fillable   = ['user_id', 'key'];
-    protected $with       = ['model', 'attachment'];
+    protected $with       = ['model'];
 
     /*
     |--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ class Count extends Eloquent
 
     public function user()
     {
-        return $this->belongsTo(config('filer.user.model'), 'user_id');
+        return $this->belongsTo(config('counter.user.model'), 'user_id');
     }
 
     public function model()
