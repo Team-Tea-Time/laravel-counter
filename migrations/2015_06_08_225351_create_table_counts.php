@@ -13,7 +13,7 @@ class CreateTableCounts extends Migration
      */
     public function up()
     {
-        Schema::create('counter_counts', function(Blueprint $table)
+        Schema::create('counter_counts', function (Blueprint $table)
         {
             $table->increments('id');
             $table->integer('user_id')->unsigned();

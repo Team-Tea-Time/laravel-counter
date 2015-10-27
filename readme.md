@@ -48,6 +48,6 @@ Filer requires no configuration out of the box in most cases, but the following 
 
 Option | Type | Description | Default
 ------ | ---- | ----------- | -------
-user | Array | The name of your app's User model, and a closure to return the user ID. These are used to associate counter activity with users. | Auth::user()->id or 0
+user | Array | The name of your app's User model, and a closure to return the user ID. These are used to associate counter activity with users. | auth()->user()->id or 0
 
 ## Usage

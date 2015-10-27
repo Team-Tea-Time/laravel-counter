@@ -34,9 +34,10 @@ return [
     */
 
     'user' => [
-        'model' => 'App\User',
-        'id'    => function() {
-            return (Auth::check()) ? Auth::user()->id : 0;
+        'model' => App\User::class,
+        'id'    => function ()
+        {
+            return auth()->check() ? auth()->user()->id : 0;
         }
     ]
 

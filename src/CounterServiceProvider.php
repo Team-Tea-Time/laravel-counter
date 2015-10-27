@@ -1,10 +1,11 @@
-<?php namespace TeamTeaTime\Counter;
+<?php
+
+namespace TeamTeaTime\Counter;
 
 use Illuminate\Support\ServiceProvider;
 
 class CounterServiceProvider extends ServiceProvider
 {
-
     /**
      * Register the service provider.
      *
@@ -12,7 +13,7 @@ class CounterServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../../config/counter.php', 'counter');
+        $this->mergeConfigFrom(__DIR__.'/../config/counter.php', 'counter');
     }
 
     /**
@@ -24,12 +25,11 @@ class CounterServiceProvider extends ServiceProvider
     {
         // Publish migrations and config
         $this->publishes([
-            __DIR__.'/../../migrations/' => base_path('/database/migrations')
+            __DIR__.'/../migrations/' => base_path('/database/migrations')
         ], 'migrations');
 
         $this->publishes([
-            __DIR__.'/../../config/counter.php' => config_path('counter.php')
+            __DIR__.'/../config/counter.php' => config_path('counter.php')
         ], 'config');
     }
-
 }

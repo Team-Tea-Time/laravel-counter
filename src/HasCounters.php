@@ -1,26 +1,24 @@
-<?php namespace TeamTeaTime\Counter;
+<?php
+
+namespace TeamTeaTime\Counter;
 
 use TeamTeaTime\Counter\Count;
 
 trait HasCounters
 {
-
     public function counts()
     {
         return $this->morphMany('TeamTeaTime\Counter\Count', 'model');
     }
 
     /**
-     * Increment a counter
+     * Increment a counter using the given key and options.
      *
-     * @param   $key            Key of the counter to increment.
-     *          string
-     *
-     * @param   $options        Array of optional settings.
-     *
-     * @return  TeamTeaTime\Counter\Count
+     * @param  string  $key
+     * @param  array  $options
+     * @return Count
      */
-    public function incrementCount($key, $options = array())
+    public function incrementCount($key, array $options = [])
     {
         // Merge in default options
         $options += [
@@ -49,5 +47,4 @@ trait HasCounters
 
         return $count;
     }
-
 }

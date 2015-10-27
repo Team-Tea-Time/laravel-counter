@@ -1,10 +1,11 @@
-<?php namespace TeamTeaTime\Counter;
+<?php
+
+namespace TeamTeaTime\Counter;
 
 use Eloquent;
 
 class Count extends Eloquent
 {
-
     // Eloquent properties
     protected $table      = 'counter_counts';
     public    $timestamps = true;
@@ -37,5 +38,4 @@ class Count extends Eloquent
     {
         return $query->where('key', '=', $key);
     }
-
 }
